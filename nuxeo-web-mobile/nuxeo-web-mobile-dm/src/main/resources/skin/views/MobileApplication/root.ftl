@@ -32,7 +32,7 @@
   <ul class="ui-listview" data-role="listview">
     <#list docs as doc>
       <li class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-li-has-icon ui-btn-up-c">
-        <a class="ui-link-inherit" data-add-back-btn="true" href="${Root.getDocumentMobileUrl(doc)}">
+        <a class="ui-link-inherit" data-transition="slide" data-add-back-btn="true" href="${Root.getDocumentMobileUrl(doc)}">
           <#if doc.common.icon?? >
             <img class="ui-li-icon ui-li-thumb" src="${basePath}/..${doc.common.icon}"/>
           <#else>

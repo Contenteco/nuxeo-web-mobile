@@ -54,8 +54,12 @@ Version: ${document.versionLabel}%03
       <a href="#" data-rel="back" data-icon="arrow-l">Back</a>
 
       <h1>${Context.getMessage('label.header.title.View')}</h1>
+      <a href="#moreAction" data-icon="bars" data-iconpos="notext">Actions</a>
+    </div>
+
+    <div data-role="panel" id="moreAction" data-position="right" data-display="reveal">
       <a href="javascript:goToStandardNavigation('${This.JSFURLPath}');" data-role="button" data-icon="arrow-r"
-         data-iconpos="right">${Context.getMessage('label.home.menu.GoToStandardNavigation')}</a>
+        data-iconpos="right">${Context.getMessage('label.home.menu.GoToStandardNavigation')}</a>
     </div>
 
     <div data-role="content" class="documentView" id="main">

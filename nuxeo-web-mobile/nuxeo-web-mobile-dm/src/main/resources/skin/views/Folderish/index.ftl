@@ -19,19 +19,19 @@
         </p>
       </#if>
       <#list Adapter.children as child>
-        <ul data-role="listview" class="ui-listview">
-          <li class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-li-has-icon ui-btn-up-c">
-            <a class="ui-link-inherit" href="${Root.getDocumentMobileUrl(child)}">
+        <ul data-role="listview">
+          <li>
+            <a data-transition="slide" href="${Root.getDocumentMobileUrl(child)}">
               <#if child.common.icon??>
-                <img class="ui-li-icon ui-li-thumb" src="${basePath}/..${child.common.icon}"/>
+                <img class="ui-li-icon" src="${basePath}/..${child.common.icon}"/>
               <#else>
-                <img class="ui-li-icon ui-li-thumb" src="${skinPath}/icons/file.gif"/>
+                <img class="ui-li-icon" src="${skinPath}/icons/file.gif"/>
               </#if>
-              <h3>${child.title}</h3>
+              <h2>${child.title}</h2>
               <#if child.dublincore.description?? >
-                <p class="ui-li-desc">&nbsp;</p>
+                <p>&nbsp;</p>
               <#else>
-                <p class="ui-li-desc">${child.dublincore.description}</p>
+                <p>${child.dublincore.description}</p>
               </#if>
             </a>
           </li>

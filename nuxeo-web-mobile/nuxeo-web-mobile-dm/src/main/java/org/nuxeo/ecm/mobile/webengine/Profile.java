@@ -99,7 +99,7 @@ public class Profile extends DefaultObject {
 
         if (userProfile != null && avatar != null) {
             // TODO : Use a relative path (be careful of proxy stuff)
-            String uriPattern = "%s/nxfile/%s/%s/userprofile:avatar/";
+            String uriPattern = "%s/nxbigfile/%s/%s/userprofile:avatar/";
             String repositoryName = ctx.getCoreSession().getRepositoryName();
             return String.format(uriPattern, contextPath, repositoryName,
                     getUserProfile(username).getId());
